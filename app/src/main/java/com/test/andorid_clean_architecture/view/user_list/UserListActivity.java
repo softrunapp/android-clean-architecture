@@ -11,6 +11,7 @@ import com.test.andorid_clean_architecture.MyApplication;
 import com.test.andorid_clean_architecture.R;
 import com.test.andorid_clean_architecture.adapter.UserAdapter;
 import com.test.andorid_clean_architecture.base.view.BaseActivity;
+import com.test.andorid_clean_architecture.view.user_detail.UserDetailsActivity;
 import com.test.andorid_clean_architecture.view_model.UserModel;
 import com.test.domain.model.User;
 
@@ -69,7 +70,7 @@ public class UserListActivity extends BaseActivity implements UserListPresenter.
 
     @Override
     public void openUserPage(UserModel user) {
-        Toast.makeText(this, user.getEmail(), Toast.LENGTH_SHORT).show();
+        UserDetailsActivity.open(this,user.getId());
     }
 
     @Override
