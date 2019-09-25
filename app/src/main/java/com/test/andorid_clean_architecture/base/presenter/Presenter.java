@@ -1,0 +1,22 @@
+package com.test.andorid_clean_architecture.base.presenter;
+
+public abstract class Presenter<T extends Presenter.View> {
+
+    private T view;
+
+    public T getView() {
+        return view;
+    }
+
+    public void setView(T view) {
+        this.view = view;
+    }
+
+    public interface View {
+        void showLoading();
+
+        void hideLoading();
+
+        void showMessage(String message);
+    }
+}
