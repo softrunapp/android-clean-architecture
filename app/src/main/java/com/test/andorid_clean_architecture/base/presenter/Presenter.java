@@ -12,6 +12,12 @@ public abstract class Presenter<T extends Presenter.View> {
         this.view = view;
     }
 
+    public void initialize() {
+    }
+
+    public void destroy() {
+    }
+
     public interface View {
         void showLoading();
 

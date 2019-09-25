@@ -27,11 +27,15 @@ dependencies {
     def appTestDependencies = rootProject.ext.presentationTestDependencies
 
     implementation appDependency.appcompat
+    implementation appDependency.material
     implementation appDependency.constraintLayout
     implementation appDependency.rxJava
     implementation appDependency.rxAndroid
     implementation appDependency.dagger
     annotationProcessor appDependency.daggerCompiler
+    implementation appDependency.butterKnife
+    annotationProcessor appDependency.butterKnifeCompiler
+    implementation appDependency.picasso
 
     testImplementation appTestDependencies.jUnit
     androidTestImplementation appTestDependencies.runner

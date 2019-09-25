@@ -3,6 +3,7 @@ ext {
     //Android
     appcompatVersion = '1.1.0'
     constraintLayoutVersion = '1.1.3'
+    materialVersion = '1.0.0'
 
     //Test Versions
     jUnitVersion = '4.12'
@@ -14,9 +15,12 @@ ext {
     rxAndroidVersio = '2.1.0'
     gsonVersion = '2.8.0'
     daggerVersion = '2.21'
+    butterknifeVersion = '10.2.0'
+    picassoVersion = '2.71828'
 
     appcompatDependency = 'androidx.appcompat:appcompat'
     constraintLayoutDependency = 'androidx.constraintlayout:constraintlayout'
+    materialDependnecy = 'com.google.android.material:material'
     jUnitDependency = 'junit:junit'
     runnerDependency = 'androidx.test:runner'
     espressoDependency = 'androidx.test.espresso:espresso-core'
@@ -26,14 +30,21 @@ ext {
     gsonDependency = 'com.google.code.gson:gson'
     daggerDependency = 'com.google.dagger:dagger'
     daggerCompilerDependency = 'com.google.dagger:dagger-compiler'
+    butterKnifeDependency = 'com.jakewharton:butterknife'
+    butterKnifeCompilerDependency = 'com.jakewharton:butterknife-compiler'
+    picassoDependency = 'com.squareup.picasso:picasso'
 
     presentationDependencies = [
-            appcompat       : buildDependency(appcompatDependency, appcompatVersion),
-            constraintLayout: buildDependency(constraintLayoutDependency, constraintLayoutVersion),
-            rxJava          : buildDependency(rxJavaDependency, rxJavaVersion),
-            rxAndroid       : buildDependency(rxAndroidDependency, rxAndroidVersio),
-            dagger          : buildDependency(daggerDependency, daggerVersion),
-            daggerCompiler  : buildDependency(daggerCompilerDependency, daggerVersion)
+            appcompat          : buildDependency(appcompatDependency, appcompatVersion),
+            material           : buildDependency(materialDependnecy, materialVersion),
+            constraintLayout   : buildDependency(constraintLayoutDependency, constraintLayoutVersion),
+            rxJava             : buildDependency(rxJavaDependency, rxJavaVersion),
+            rxAndroid          : buildDependency(rxAndroidDependency, rxAndroidVersio),
+            dagger             : buildDependency(daggerDependency, daggerVersion),
+            daggerCompiler     : buildDependency(daggerCompilerDependency, daggerVersion),
+            butterKnife        : buildDependency(butterKnifeDependency, butterknifeVersion),
+            butterKnifeCompiler: buildDependency(butterKnifeCompilerDependency, butterknifeVersion),
+            picasso            : buildDependency(picassoDependency, picassoVersion)
     ]
 
     presentationTestDependencies = [
@@ -44,7 +55,7 @@ ext {
 
     domainDependencies = [
             rxJava: buildDependency(rxJavaDependency, rxJavaVersion),
-            dagger   : buildDependency(daggerDependency, daggerVersion)
+            dagger: buildDependency(daggerDependency, daggerVersion)
     ]
 
     dataDependencies = [
