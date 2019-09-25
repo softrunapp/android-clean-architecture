@@ -63,13 +63,6 @@
     "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"
   },
   {
-    "id": 10,
-    "email": "byron.fields@reqres.in",
-    "first_name": "Byron",
-    "last_name": "Fields",
-    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"
-  },
-  {
     "id": 11,
     "email": "george.edwards@reqres.in",
     "first_name": "George",
