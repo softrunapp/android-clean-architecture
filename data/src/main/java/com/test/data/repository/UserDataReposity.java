@@ -2,33 +2,31 @@ package com.test.data.repository;
 
 import com.test.data.datasource.DataSource;
 import com.test.data.datasource.UserDataSourceFactory;
-import com.test.data.datasource.mapper.UserToUserEntitiyMapper;
-import com.test.data.entity.UserEntity;
+import com.test.data.datasource.mapper.UserToUserEntityMapper;
 import com.test.domain.model.User;
 import com.test.domain.repository.UserRepository;
 
 import java.util.List;
 
 import io.reactivex.Observable;
-import io.reactivex.functions.Function;
 
 public class UserDataReposity implements UserRepository {
 
     private final DataSource dataSource;
-    private final UserToUserEntitiyMapper userToUserEntitiyMapper;
+    private final UserToUserEntityMapper userToUserEntityMapper;
 
-    public UserDataReposity(UserDataSourceFactory userDataSourceFactory, UserToUserEntitiyMapper userToUserEntitiyMapper) {
+    public UserDataReposity(UserDataSourceFactory userDataSourceFactory, UserToUserEntityMapper userToUserEntityMapper) {
         this.dataSource = userDataSourceFactory.createDataSource();
-        this.userToUserEntitiyMapper = userToUserEntitiyMapper;
+        this.userToUserEntityMapper = userToUserEntityMapper;
     }
 
     @Override
     public Observable<List<User>> userList() {
-        return dataSource.userEntityList().map(userToUserEntitiyMapper::reversMap);
+        return dataSource.userEntityList().map(userToUserEntityMapper::reversMap);
     }
 
     @Override
     public Observable<User> user(int userId) {
-        return dataSource.userEntity(userId).map(userToUserEntitiyMapper::reversMap);
+        return dataSource.userEntity(userId).map(userToUserEntityMapper::reversMap);
     }
 }
