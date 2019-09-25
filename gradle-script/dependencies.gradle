@@ -1,0 +1,59 @@
+ext {
+
+    //Android
+    appcompatVersion = '1.1.0'
+    constraintLayoutVersion = '1.1.3'
+
+    //Test Versions
+    jUnitVersion = '4.12'
+    runnerVersion = '1.2.0'
+    espressoVersion = '3.2.0'
+
+    //Libraries
+    rxJavaVersion = '2.2.4'
+    rxAndroidVersio = '2.1.0'
+    gsonVersion = '2.8.0'
+
+    appcompatDependency = 'androidx.appcompat:appcompat'
+    constraintLayoutDependency = 'androidx.constraintlayout:constraintlayout'
+    jUnitDependency = 'junit:junit'
+    runnerDependency = 'androidx.test:runner'
+    espressoDependency = 'androidx.test.espresso:espresso-core'
+
+    rxJavaDependency = 'io.reactivex.rxjava2:rxjava'
+    rxAndroidDependency = 'io.reactivex.rxjava2:rxandroid'
+    gsonDependency = 'com.google.code.gson:gson'
+
+    presentationDependencies = [
+            appcompat       : buildDependency(appcompatDependency, appcompatVersion),
+            constraintLayout: buildDependency(constraintLayoutDependency, constraintLayoutVersion),
+            rxJava          : buildDependency(rxJavaDependency, rxJavaVersion),
+            rxAndroid       : buildDependency(rxAndroidDependency, rxAndroidVersio)
+    ]
+
+    presentationTestDependencies = [
+            jUnit   : buildDependency(jUnitDependency, jUnitVersion),
+            runner  : buildDependency(runnerDependency, runnerVersion),
+            espresso: buildDependency(espressoDependency, espressoVersion)
+    ]
+
+    domainDependencies = [
+            rxJava: buildDependency(rxJavaDependency, rxJavaVersion)
+    ]
+
+    dataDependencies = [
+            appcompat: buildDependency(appcompatDependency, appcompatVersion),
+            gson     : buildDependency(gsonDependency, gsonVersion),
+            rxJava   : buildDependency(rxJavaDependency, rxJavaVersion)
+    ]
+
+    dataTestDependencies = [
+            jUnit   : buildDependency(jUnitDependency, jUnitVersion),
+            runner  : buildDependency(runnerDependency, runnerVersion),
+            espresso: buildDependency(espressoDependency, espressoVersion)
+    ]
+}
+
+static buildDependency(String dependency, String version) {
+    return "${dependency}:${version}"
+}

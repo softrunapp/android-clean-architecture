@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+dependencies {
+    def domainDependnecies = rootProject.ext.domainDependencies
+    implementation domainDependnecies.rxJava
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
