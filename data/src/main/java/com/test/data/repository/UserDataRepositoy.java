@@ -8,14 +8,16 @@ import com.test.domain.repository.UserRepository;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import io.reactivex.Observable;
 
-public class UserDataReposity implements UserRepository {
+public class UserDataRepositoy implements UserRepository {
 
     private final DataSource dataSource;
     private final UserToUserEntityMapper userToUserEntityMapper;
-
-    public UserDataReposity(UserDataSourceFactory userDataSourceFactory, UserToUserEntityMapper userToUserEntityMapper) {
+    @Inject
+    public UserDataRepositoy(UserDataSourceFactory userDataSourceFactory, UserToUserEntityMapper userToUserEntityMapper) {
         this.dataSource = userDataSourceFactory.createDataSource();
         this.userToUserEntityMapper = userToUserEntityMapper;
     }

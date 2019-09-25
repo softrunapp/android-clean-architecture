@@ -8,9 +8,11 @@ import com.test.data.entity.UserEntity;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class UserEntityJsonMapper {
     private final Gson gson;
-
+    @Inject
     public UserEntityJsonMapper() {
         gson = new Gson();
     }

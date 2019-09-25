@@ -13,6 +13,7 @@ ext {
     rxJavaVersion = '2.2.4'
     rxAndroidVersio = '2.1.0'
     gsonVersion = '2.8.0'
+    daggerVersion = '2.21'
 
     appcompatDependency = 'androidx.appcompat:appcompat'
     constraintLayoutDependency = 'androidx.constraintlayout:constraintlayout'
@@ -23,12 +24,16 @@ ext {
     rxJavaDependency = 'io.reactivex.rxjava2:rxjava'
     rxAndroidDependency = 'io.reactivex.rxjava2:rxandroid'
     gsonDependency = 'com.google.code.gson:gson'
+    daggerDependency = 'com.google.dagger:dagger'
+    daggerCompilerDependency = 'com.google.dagger:dagger-compiler'
 
     presentationDependencies = [
             appcompat       : buildDependency(appcompatDependency, appcompatVersion),
             constraintLayout: buildDependency(constraintLayoutDependency, constraintLayoutVersion),
             rxJava          : buildDependency(rxJavaDependency, rxJavaVersion),
-            rxAndroid       : buildDependency(rxAndroidDependency, rxAndroidVersio)
+            rxAndroid       : buildDependency(rxAndroidDependency, rxAndroidVersio),
+            dagger          : buildDependency(daggerDependency, daggerVersion),
+            daggerCompiler  : buildDependency(daggerCompilerDependency, daggerVersion)
     ]
 
     presentationTestDependencies = [
@@ -38,13 +43,15 @@ ext {
     ]
 
     domainDependencies = [
-            rxJava: buildDependency(rxJavaDependency, rxJavaVersion)
+            rxJava: buildDependency(rxJavaDependency, rxJavaVersion),
+            dagger   : buildDependency(daggerDependency, daggerVersion)
     ]
 
     dataDependencies = [
             appcompat: buildDependency(appcompatDependency, appcompatVersion),
             gson     : buildDependency(gsonDependency, gsonVersion),
-            rxJava   : buildDependency(rxJavaDependency, rxJavaVersion)
+            rxJava   : buildDependency(rxJavaDependency, rxJavaVersion),
+            dagger   : buildDependency(daggerDependency, daggerVersion)
     ]
 
     dataTestDependencies = [

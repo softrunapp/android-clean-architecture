@@ -3,7 +3,13 @@ package com.test.data.datasource.mapper;
 import com.test.data.entity.UserEntity;
 import com.test.domain.model.User;
 
+import javax.inject.Inject;
+
 public class UserToUserEntityMapper extends Mapper<User, UserEntity> {
+    @Inject
+    public UserToUserEntityMapper() {
+    }
+
     @Override
     public UserEntity map(User value) {
         UserEntity userEntity = new UserEntity();

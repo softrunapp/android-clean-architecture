@@ -35,6 +35,7 @@ dependencies {
     implementation dataDependencies.appcompat
     implementation dataDependencies.gson
     implementation dataDependencies.rxJava
+    implementation dataDependencies.dagger
 
     testImplementation dataTestDependencies.jUnit
     androidTestImplementation dataTestDependencies.runner

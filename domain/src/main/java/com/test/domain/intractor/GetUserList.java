@@ -5,13 +5,16 @@ import com.test.domain.repository.UserRepository;
 
 import java.util.List;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import io.reactivex.Observable;
 import io.reactivex.Scheduler;
 
 public class GetUserList extends UseCase<List<User>> {
     private final UserRepository userRepository;
-
-    GetUserList(Scheduler executorThread, Scheduler uiThread, UserRepository userRepository) {
+    @Inject
+    public GetUserList(@Named("executor_thread") Scheduler executorThread, @Named("ui_thread") Scheduler uiThread, UserRepository userRepository) {
         super(executorThread, uiThread);
         this.userRepository = userRepository;
     }

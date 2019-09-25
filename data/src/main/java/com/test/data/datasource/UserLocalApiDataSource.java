@@ -6,11 +6,13 @@ import com.test.data.local.LocalApi;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import io.reactivex.Observable;
 
 public class UserLocalApiDataSource implements DataSource {
     private final LocalApi localApi;
-
+    @Inject
     public UserLocalApiDataSource(LocalApi localApi) {
         this.localApi = localApi;
     }

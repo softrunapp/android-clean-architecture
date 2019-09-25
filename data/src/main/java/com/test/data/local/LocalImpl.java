@@ -11,12 +11,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import io.reactivex.Observable;
 
 public class LocalImpl implements LocalApi {
     private final Context context;
     private final UserEntityJsonMapper userEntityJsonMapper;
-
+    @Inject
     public LocalImpl(Context context, UserEntityJsonMapper userEntityJsonMapper) {
         this.context = context;
         this.userEntityJsonMapper = userEntityJsonMapper;
@@ -65,7 +67,7 @@ public class LocalImpl implements LocalApi {
     }
 
     private String getUsersJson() {
-        final String USERS_FILE = "users.josn";
+        final String USERS_FILE = "users.json";
         String result = "";
         try {
             StringBuilder builder = new StringBuilder();

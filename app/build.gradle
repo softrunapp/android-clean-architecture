@@ -30,6 +30,8 @@ dependencies {
     implementation appDependency.constraintLayout
     implementation appDependency.rxJava
     implementation appDependency.rxAndroid
+    implementation appDependency.dagger
+    annotationProcessor appDependency.daggerCompiler
 
     testImplementation appTestDependencies.jUnit
     androidTestImplementation appTestDependencies.runner
