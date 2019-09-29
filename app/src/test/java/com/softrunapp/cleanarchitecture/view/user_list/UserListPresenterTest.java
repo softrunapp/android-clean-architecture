@@ -1,8 +1,6 @@
 package com.softrunapp.cleanarchitecture.view.user_list;
 
-import com.softrunapp.cleanarchitecture.view_model.UserModel;
 import com.softrunapp.cleanarchitecture.view_model.mapper.UserModelToUserMapper;
-import com.softrunapp.data.repository.UserDataRepositoy;
 import com.softrunapp.domain.intractor.GetUserList;
 import com.softrunapp.domain.model.User;
 
@@ -48,6 +46,7 @@ public class UserListPresenterTest {
 
     @Test
     public void initialize() {
+        verify(userListView).showLoading();
         verify(getUserList).execute(disposableObserverArgumentCaptor.capture());
 
         disposableObserverArgumentCaptor.getValue().onComplete();
