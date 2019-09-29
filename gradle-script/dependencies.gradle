@@ -9,6 +9,7 @@ ext {
     jUnitVersion = '4.12'
     runnerVersion = '1.2.0'
     espressoVersion = '3.2.0'
+    mockitoVersion = '2.15.0'
 
     //Libraries
     rxJavaVersion = '2.2.4'
@@ -24,6 +25,7 @@ ext {
     jUnitDependency = 'junit:junit'
     runnerDependency = 'androidx.test:runner'
     espressoDependency = 'androidx.test.espresso:espresso-core'
+    mockitoDependency = 'org.mockito:mockito-core'
 
     rxJavaDependency = 'io.reactivex.rxjava2:rxjava'
     rxAndroidDependency = 'io.reactivex.rxjava2:rxandroid'
@@ -50,12 +52,19 @@ ext {
     presentationTestDependencies = [
             jUnit   : buildDependency(jUnitDependency, jUnitVersion),
             runner  : buildDependency(runnerDependency, runnerVersion),
-            espresso: buildDependency(espressoDependency, espressoVersion)
+            espresso: buildDependency(espressoDependency, espressoVersion),
+            mockito: buildDependency(mockitoDependency, mockitoVersion)
     ]
 
     domainDependencies = [
             rxJava: buildDependency(rxJavaDependency, rxJavaVersion),
             dagger: buildDependency(daggerDependency, daggerVersion)
+    ]
+
+    domainTestDependencies = [
+            jUnit  : buildDependency(jUnitDependency, jUnitVersion),
+            mockito: buildDependency(mockitoDependency, mockitoVersion)
+
     ]
 
     dataDependencies = [

@@ -32,14 +32,14 @@ dependencies {
     implementation appDependency.rxJava
     implementation appDependency.rxAndroid
     implementation appDependency.dagger
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
     annotationProcessor appDependency.daggerCompiler
     implementation appDependency.butterKnife
     annotationProcessor appDependency.butterKnifeCompiler
     implementation appDependency.picasso
 
     testImplementation appTestDependencies.jUnit
+    testImplementation appTestDependencies.mockito
     androidTestImplementation appTestDependencies.runner
     androidTestImplementation appTestDependencies.espresso
 

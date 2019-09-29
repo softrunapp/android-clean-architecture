@@ -2,8 +2,13 @@ apply plugin: 'java-library'
 
 dependencies {
     def domainDependencies = rootProject.ext.domainDependencies
+    def domainTestDependencies = rootProject.ext.domainTestDependencies
     implementation domainDependencies.rxJava
     implementation domainDependencies.dagger
+
+    testImplementation domainTestDependencies.jUnit
+    testImplementation domainTestDependencies.mockito
+
 
 }
 
