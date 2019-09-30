@@ -15,7 +15,6 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import io.reactivex.observers.DisposableObserver;
 
@@ -24,7 +23,6 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 public class UserListPresenterTest {
-    private static final Random RANDOM = new Random();
     private UserListPresenter userListPresenter;
     private UserModelToUserMapper userModelToUserMapper;
 
@@ -91,7 +89,7 @@ public class UserListPresenterTest {
         List<User> users = new ArrayList<>();
         User user = new User();
         for (int i = 0; i < 10; i++) {
-            user.setId(RANDOM.nextInt(Integer.MAX_VALUE));
+            user.setId(i);
             user.setFirstName("John");
             user.setLastName("Smith");
             user.setEmail("john@gmail.com");
