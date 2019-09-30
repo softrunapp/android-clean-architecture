@@ -15,8 +15,6 @@ import org.mockito.MockitoAnnotations;
 
 import io.reactivex.observers.DisposableObserver;
 
-import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
