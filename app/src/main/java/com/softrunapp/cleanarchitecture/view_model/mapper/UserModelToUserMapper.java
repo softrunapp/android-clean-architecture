@@ -8,7 +8,7 @@ import javax.inject.Inject;
 
 public class UserModelToUserMapper extends Mapper<UserModel, User> {
     @Inject
-    UserModelToUserMapper() {
+    public UserModelToUserMapper() {
 
     }
 
