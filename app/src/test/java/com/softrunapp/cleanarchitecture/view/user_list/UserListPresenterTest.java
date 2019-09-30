@@ -67,6 +67,7 @@ public class UserListPresenterTest {
         disposableObserverArgumentCaptor.getValue().onError(throwable);
         verify(userListView, times(1)).hideLoading();
         verify(userListView, times(1)).showMessage("detected error!");
+        verify(throwable).printStackTrace();
     }
 
     @Test
