@@ -41,5 +41,6 @@ public class GetUserListTest {
 
     @After
     public void tearDown() throws Exception {
+        getUserList = null;
     }
 }
