@@ -39,6 +39,7 @@ dependencies {
 
     testImplementation dataTestDependencies.jUnit
     testImplementation dataTestDependencies.mockito
+    testImplementation dataTestDependencies.robolectric
     androidTestImplementation dataTestDependencies.runner
     androidTestImplementation dataTestDependencies.espresso
 
