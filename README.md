@@ -7,7 +7,7 @@ This project is based on Clean Architecture by Robert Cecil Martin aka Uncle Bob
 </dive>
 
 ## Libraries used on the sample project
-- RxJava
+- [RxJava link=http://google.com]
 - RxAndroid
 - Dagger2 
 - Gson
