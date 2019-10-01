@@ -38,6 +38,7 @@ dependencies {
     implementation dataDependencies.dagger
 
     testImplementation dataTestDependencies.jUnit
+    testImplementation dataTestDependencies.mockito
     androidTestImplementation dataTestDependencies.runner
     androidTestImplementation dataTestDependencies.espresso
 
