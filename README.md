@@ -1,6 +1,6 @@
 # Android Easy Clean Architecture Java
 This project is based on Clean Architecture by Robert Cecil Martin aka Uncle Bob.
-
+In this repository, you can get a list of users and by click on users get users details by user ids.
 ## Preview
 <div>
 <img src="screenshot_1.png" alt="preview" height="380">
