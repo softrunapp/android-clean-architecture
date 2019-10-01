@@ -7,13 +7,18 @@ This project is based on Clean Architecture by Robert Cecil Martin aka Uncle Bob
 </dive>
 
 ## Libraries used on the sample project
-- [RxJava link](http://google.com)
-- RxAndroid
-- Dagger2 
-- Gson
-- Butterknife
-- Picasso
-- RecyclerView
+- [AppCompat, RecyclerView and Design Library](https://developer.android.com/topic/libraries/support-library/?hl=es)
+- [RxJava](https://github.com/ReactiveX/Rxjava)
+- [RxAndroid](https://github.com/ReactiveX/RxAndroid)
+- [Dagger2](https://github.com/google/dagger)
+- [Gson](https://github.com/google/gson)
+- [Butterknife](https://github.com/JakeWharton/butterknife)
+- [Picasso](https://github.com/square/picasso)
+- [jUnit](https://developer.android.com/reference/junit/framework/package-summary.html?hl=es)
+- [Mockito](https://site.mockito.org/)
+- [Robolecteric](http://robolectric.org/)
+- [Hamcrest](http://hamcrest.org/)
+
 
 ## License
       MIT License
