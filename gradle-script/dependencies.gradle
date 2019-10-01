@@ -77,7 +77,8 @@ ext {
     dataTestDependencies = [
             jUnit   : buildDependency(jUnitDependency, jUnitVersion),
             runner  : buildDependency(runnerDependency, runnerVersion),
-            espresso: buildDependency(espressoDependency, espressoVersion)
+            espresso: buildDependency(espressoDependency, espressoVersion),
+            mockito: buildDependency(mockitoDependency, mockitoVersion)
     ]
 }
 
