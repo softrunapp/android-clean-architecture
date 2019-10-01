@@ -1,11 +1,15 @@
-# Android Clean Architecture Java
+# Android Easy Clean Architecture Java
 This project is based on Clean Architecture by Robert Cecil Martin aka Uncle Bob.
+
 ## Preview
 <div>
 <img src="screenshot_1.png" alt="preview" height="380">
 <img src="screenshot_2.png" alt="preview" height="380">
 <img src="screenshot_3.png" alt="preview" height="380">
 </dive>
+
+## Android Clean Architecture
+<img src="clean_architecture.png" alt="preview">
 
 ## Libraries used on the sample project
 - [AppCompat, RecyclerView and Design Library](https://developer.android.com/topic/libraries/support-library/?hl=es)
@@ -19,7 +23,6 @@ This project is based on Clean Architecture by Robert Cecil Martin aka Uncle Bob
 - [Mockito](https://site.mockito.org/)
 - [Robolecteric](http://robolectric.org/)
 - [Hamcrest](http://hamcrest.org/)
-
 
 ## License
       MIT License
