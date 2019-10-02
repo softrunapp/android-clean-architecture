@@ -1,4 +1,4 @@
-# Android Easy Clean Architecture Java
+# Android Easy Clean Architecture With MVP Java
 This project is based on Clean Architecture by Robert Cecil Martin aka Uncle Bob. 
 In this repository, you can get a list of users and click on users to get users' details by user ids.
 ## Preview
